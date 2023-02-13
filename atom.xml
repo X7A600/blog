@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://metahub.top</id>
+    <title>元中心</title>
+    <updated>2023-02-13T06:17:36.226Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://metahub.top"/>
+    <link rel="self" href="https://metahub.top/atom.xml"/>
+    <subtitle>&lt;!-- 看惯了黑夜的人,不应该习惯黑夜,而是应该期待黑夜中的光明。--&gt;
+&lt;p&gt;但知行好事,莫要问前程。&lt;/p&gt;</subtitle>
+    <logo>https://metahub.top/images/avatar.png</logo>
+    <icon>https://metahub.top/favicon.ico</icon>
+    <rights>All rights reserved 2023, 元中心</rights>
+    <entry>
+        <title type="html"><![CDATA[NotePad++平替 一起来抵制NotePad++☹]]></title>
+        <id>https://metahub.top/pLgBdmcVR/</id>
+        <link href="https://metahub.top/pLgBdmcVR/">
+        </link>
+        <updated>2023-02-01T01:17:15.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[利用CloudFlarePages来部署烟花模拟器]]></title>
+        <id>https://metahub.top/GweIPxfzp/</id>
+        <link href="https://metahub.top/GweIPxfzp/">
+        </link>
+        <updated>2023-01-11T01:16:03.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[一起来惩治伸手党 教他百度一下]]></title>
+        <id>https://metahub.top/n3Wvf_Tc-/</id>
+        <link href="https://metahub.top/n3Wvf_Tc-/">
+        </link>
+        <updated>2022-12-15T01:14:31.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[信息收集—-域名收集]]></title>
+        <id>https://metahub.top/2H98pFlx8/</id>
+        <link href="https://metahub.top/2H98pFlx8/">
+        </link>
+        <updated>2022-09-05T02:50:41.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[企业目标资产信息收集]]></title>
+        <id>https://metahub.top/1Dac3mbm5/</id>
+        <link href="https://metahub.top/1Dac3mbm5/">
+        </link>
+        <updated>2022-09-01T02:56:21.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[自然人信息社工]]></title>
+        <id>https://metahub.top/fY9Ehwd_W/</id>
+        <link href="https://metahub.top/fY9Ehwd_W/">
+        </link>
+        <updated>2022-09-01T02:54:04.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用docker运行qBittorrent，并通过WEB界面管理]]></title>
+        <id>https://metahub.top/laNxzOH-D/</id>
+        <link href="https://metahub.top/laNxzOH-D/">
+        </link>
+        <updated>2022-08-16T02:37:39.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[美国以安全为由禁止出口用于3纳米芯片生产的技术]]></title>
+        <id>https://metahub.top/tCyhx7MuR/</id>
+        <link href="https://metahub.top/tCyhx7MuR/">
+        </link>
+        <updated>2022-08-16T00:57:31.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[谣言 世界最古老的传媒 读书笔记 ]]></title>
+        <id>https://metahub.top/v6dw66J_E/</id>
+        <link href="https://metahub.top/v6dw66J_E/">
+        </link>
+        <updated>2022-08-15T14:40:45.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Telegram开启私信验证]]></title>
+        <id>https://metahub.top/8B61KDvLV/</id>
+        <link href="https://metahub.top/8B61KDvLV/">
+        </link>
+        <updated>2022-08-15T12:41:23.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[世界上最好用的浏览器 FireFox]]></title>
+        <id>https://metahub.top/NK9ursX2C/</id>
+        <link href="https://metahub.top/NK9ursX2C/">
+        </link>
+        <updated>2022-08-10T09:21:56.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[你的 CPU 太先进啦 我罢工啦😞]]></title>
+        <id>https://metahub.top/xOO3FDEtO/</id>
+        <link href="https://metahub.top/xOO3FDEtO/">
+        </link>
+        <updated>2022-08-10T00:48:51.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[震惊！三名电工在全球范围内击败谷歌😥]]></title>
+        <id>https://metahub.top/Pz4ghZdU/</id>
+        <link href="https://metahub.top/Pz4ghZdU/">
+        </link>
+        <updated>2022-08-09T11:46:59.000Z</updated>
+    </entry>
+</feed>

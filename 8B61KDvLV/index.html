@@ -1,0 +1,492 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Telegram开启私信验证 - 元中心</title>
+<link rel="shortcut icon" href="https://metahub.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://metahub.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://metahub.top/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Telegram开启私信验证 - 元中心 - Atom Feed" href="https://metahub.top/atom.xml">
+
+    
+
+  <meta name="description" content="0 痛点 ⚠️
+Telegram中常常有各种各样的奇怪私聊，比如虚拟货币广告、 骗子信息等等。其中大部分都是机器人自动发送。其实可以通过添加一个简单的人机验证解决，将机器人排除在我的Telegram外。
+1 解决
+01 你需要
+
+一个Tel..." />
+  <meta property="og:title" content="Telegram开启私信验证 - 元中心">
+  <meta property="og:description" content="0 痛点 ⚠️
+Telegram中常常有各种各样的奇怪私聊，比如虚拟货币广告、 骗子信息等等。其中大部分都是机器人自动发送。其实可以通过添加一个简单的人机验证解决，将机器人排除在我的Telegram外。
+1 解决
+01 你需要
+
+一个Tel..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://metahub.top/8B61KDvLV/" />
+  <meta property="og:image" content="https://pic.metahub.top/file/5a20d672a7e32df81683e.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="Telegram开启私信验证 - 元中心">
+  <meta name="twitter:description" content="0 痛点 ⚠️
+Telegram中常常有各种各样的奇怪私聊，比如虚拟货币广告、 骗子信息等等。其中大部分都是机器人自动发送。其实可以通过添加一个简单的人机验证解决，将机器人排除在我的Telegram外。
+1 解决
+01 你需要
+
+一个Tel...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://metahub.top/8B61KDvLV/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://metahub.top/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://metahub.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      元中心
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          Telegram开启私信验证
+        </h1>
+        
+          <img src="https://pic.metahub.top/file/5a20d672a7e32df81683e.png" alt="Telegram开启私信验证" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">08-15-2022 · 6 min read</div>
+          
+            <a href="https://metahub.top/4UN82yg8o/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              docker
+            </a>
+          
+            <a href="https://metahub.top/90vM4Nq7x/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              技术分享
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <h2 id="0-痛点-️">0 痛点 ⚠️</h2>
+<p>Telegram中常常有各种各样的奇怪私聊，比如虚拟货币广告、 骗子信息等等。其中大部分都是机器人自动发送。其实可以通过添加一个简单的人机验证解决，将机器人排除在我的Telegram外。</p>
+<h2 id="1-解决">1 解决</h2>
+<h3 id="01-你需要">01 你需要</h3>
+<ul>
+<li>一个Telegram账号</li>
+<li>一台服务器（可以是vps，软路由等等，需要长期运作）<br>
+我购买的是RackNerd的VPS，我购买的时候不到10刀一年很便宜，非广告，vultr、搬瓦工等也是很合适的云供应商选择。</li>
+</ul>
+<h3 id="02-设置方法">02 设置方法</h3>
+<h3 id="登陆这个网址">登陆<a href="https://my.telegram.org/auth">这个网址 </a></h3>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2022/08/15/vdI600.png" alt="" loading="lazy"></figure>
+<p>输入Telegram绑定的电话号码点击Next，将会在Telegram收到验证码，输入验证码即可登录。</p>
+<blockquote>
+<p>此处的电话号码需要加上国际区号，例如电话号码为123456789，若是美国号码则输入： +1123456789 若是中国号码则输入： +86123456789</p>
+</blockquote>
+<p>登陆后进入如下界面，点击<code>API development tools</code>。</p>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2022/08/15/vdIRtU.png" alt="" loading="lazy"></figure>
+<p>进入如下界面，随意填写点<code>Create application</code>创建应用。</p>
+<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2022/08/15/vdIj9e.png" alt="" loading="lazy"></figure>
+<blockquote>
+<p>如果此时报错，通过报错内容检查名称是否合法。如果只显示Error，切换IP地址再次尝试（最好换美区）</p>
+</blockquote>
+<p>然后就进入这样一个界面：</p>
+<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2022/08/15/vdos8e.png" alt="" loading="lazy"></figure>
+<h3 id="002-安装验证插件">002 安装验证插件</h3>
+<p>验证插件名称为<strong>PMCaptcha</strong>，是TelegramBot应用PagerMaid其GitHub仓库：</p>
+<p><a href="https://github.com/TeamPGM/PagerMaid_Plugins_Pyro">https://github.com/TeamPGM/PagerMaid_Plugins_Pyro</a></p>
+<p>先安装PagerMaid：</p>
+<p>使用SSH或Mosh连接到你的服务器。</p>
+<p>使用如下命令进行Docker安装（如未安装Docker请先安装Docker，可自行查询安装方法）</p>
+<pre><code class="language-bash">wget https://raw.githubusercontent.com/TeamPGM/PagerMaid-Pyro/development/utils/docker.sh -O docker.sh &amp;amp;&amp;amp; chmod +x docker.sh &amp;amp;&amp;amp; bash docker.sh
+</code></pre>
+<h4 id="docker安装pagermaid">docker安装PagerMaid</h4>
+<p>输入1安装PagerMaid</p>
+<figure data-type="image" tabindex="5"><img src="https://s1.ax1x.com/2022/08/15/vdozPU.png" alt="" loading="lazy"></figure>
+<p>输入docker容器的名字</p>
+<figure data-type="image" tabindex="6"><img src="https://s1.ax1x.com/2022/08/15/vdTFq1.png" alt="" loading="lazy"></figure>
+<p>只要不重名，随便输一个就行</p>
+<figure data-type="image" tabindex="7"><img src="https://s1.ax1x.com/2022/08/15/vdTGIf.png" alt="" loading="lazy"></figure>
+<p>输入刚才申请的api_id 和 api_hash后按回车</p>
+<p>在启用日志记录的地方输入n按回车</p>
+<p>进入容器后需要输入完整手机号后输入验证码登录</p>
+<figure data-type="image" tabindex="8"><img src="https://s1.ax1x.com/2022/08/15/vdHQEt.png" alt="" loading="lazy"></figure>
+<p>登录完成后按<kbd>Ctrl</kbd>+<kbd>P</kbd>后按<kbd>Ctrl</kbd>+<kbd>Q</kbd>退出docker容器</p>
+<p>或使用手动安装，可查看<a href="https://link.zhihu.com/?target=https%3A//xtaolabs.com/%23/">文档</a>这里不多赘述。</p>
+<p>依照指令安装并配置后，即可打开Telegram。</p>
+<p>尝试在收藏夹输入<code>,help</code> 记住前面有个逗号且为半角逗号（就是英文逗号）。如果得到以下提示说明安装成功了。</p>
+<figure data-type="image" tabindex="9"><img src="https://s1.ax1x.com/2022/08/15/vdHo8O.png" alt="" loading="lazy"></figure>
+<p>输入以下命令来安装验证插件。</p>
+<pre><code class="language-bash">,apt install pmcaptcha
+</code></pre>
+<p>安装成功后，使用命令来查看插件使用方法：</p>
+<pre><code class="language-bash">,pmcaptcha h
+</code></pre>
+<p>返回如下：</p>
+<pre><code class="language-bash">&amp;gt;&amp;gt;&amp;gt; ,pmcaptcha h
+
+PMCaptcha 指令列表:
+
+,pmcaptcha
+· 查询当前用户的验证状态
+
+,pmcaptcha version
+· 查看 PMCaptcha 当前版本
+
+,pmcaptcha help [command]
+· 显示指令帮助信息，使用 ,{cmd_name} search [搜索内容] 进行文档、指令(和别名)搜索
+
+,pmcaptcha check [id]
+· 查询指定用户验证状态，对该信息回复或者输入用户 ID，如未指定为当前私聊用户 ID
+
+,pmcaptcha add [id]
+· 将 ID 加入已验证，对该信息回复或者输入用户 ID，如未指定为当前私聊用户 ID
+
+,pmcaptcha delete [id]
+· 移除 ID 验证记录，对该信息回复或者输入用户 ID，如未指定为当前私聊用户 ID
+
+,pmcaptcha unstuck [id]
+· 解除一个用户的验证状态，通常用于解除卡死的验证状态
+
+,pmcaptcha welcome [message]
+· 查看或设置验证通过时发送的消息
+
+,pmcaptcha whitelist [array]
+· 查看或设置关键词白名单列表（英文逗号分隔）
+
+,pmcaptcha blacklist [array]
+· 查看或设置关键词黑名单列表 (英文逗号分隔)
+
+,pmcaptcha timeout [seconds]
+· 查看或设置超时时间，默认为 30 秒、图像模式为 5 分钟
+
+,pmcaptcha disable_pm [toggle]
+· 启用 / 禁止陌生人私聊，默认为 关闭 （允许私聊）
+
+,pmcaptcha stats [arg]
+· 查看验证统计
+
+,pmcaptcha action [action]
+· 选择验证失败的处理方式，默认为 封禁
+
+,pmcaptcha report [toggle]
+· 选择验证失败后是否举报该用户，默认为 开启
+
+,pmcaptcha premium [action]
+· 选择对 Premium 用户的操作，默认为 不执行任何操作
+
+,pmcaptcha groups_in_common [count]
+· 设置是否对拥有一定数量的共同群的用户添加白名单
+
+,pmcaptcha chat_history [count]
+· 设置对拥有一定数量的聊天记录的用户添加白名单（触发验证的信息不计算在内）
+
+,pmcaptcha initiative [toggle]
+· 设置对主动进行对话的用户添加白名单，默认为 关闭
+
+,pmcaptcha silent [toggle]
+· 减少信息发送，默认为 关闭
+
+,pmcaptcha flood [limit]
+· 设置一分钟内超过 n 人开启轰炸检测机制，默认为 5 人
+
+,pmcaptcha flood_username [toggle]
+· 设置是否在轰炸时启用“转移用户名到临时频道”机制（如有用户名）
+
+,pmcaptcha flood_act [action]
+· 设置轰炸结束后进行的处理方式，默认为 删除并举报所有轰炸的用户
+
+,pmcaptcha custom_rule &amp;lt;rule&amp;gt;
+· 用户自定义过滤规则，规则返回True为白名单，否则继续执行下面的规则
+
+,pmcaptcha collect_logs [toggle]
+· 查看或设置是否允许 PMCaptcha 收集验证错误相关信息以帮助改进
+
+,pmcaptcha change_type [type]
+· 切换验证码类型，默认为 计算验证
+
+,pmcaptcha show_settings
+· 显示目前所有的设置
+
+,pmcaptcha change_img_type [type]
+· 切换图像辨识使用接口，默认为 funCaptcha
+
+,pmcaptcha img_retry_chance [number]
+· 图形验证码最大可重试次数，默认为 3
+
+详细指令请输入 ,pmcaptcha h [指令名称 ]
+
+优先级:
+initiative &amp;gt; user_defined &amp;gt; flood &amp;gt; disable_pm &amp;gt; chat_history &amp;gt; groups_in_common &amp;gt; premium &amp;gt; whitelist &amp;gt; blacklist &amp;gt; captcha
+
+遇到任何问题请先 ,apt update 、 ,restart 后复现再反馈
+  捐赠网址 捐赠说明 (v2.2)
+</code></pre>
+<p>现在你的私聊验证已经开启了，效果如下</p>
+<p>当有陌生人给你发送私聊信息的时候，就会收到这样的验证信息：</p>
+<figure data-type="image" tabindex="10"><img src="https://s1.ax1x.com/2022/08/16/vwlrxP.png" alt="" loading="lazy"></figure>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+        
+
+        
+          <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
+<script type="application/javascript" src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script type="application/javascript">
+
+var options = {
+  shortname: '333398-xyz',
+  apikey: '78AVj8GBePHltbZlJzN2rggoNCHEuIvXeh5kAOUa7sIrrTjgzuIROUQrXaNTeI5k',
+}
+if ('https://disqus.skk.moe/disqus/') {
+  options.api = 'https://disqus.skk.moe/disqus/'
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+        
+      
+
+      
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  <a href="https://icp.gov.moe/?keyword=20230330" target="_blank">萌ICP备20230330号</a>
+<p>如非特殊说明, 本网站文字及图片内容采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>许可协议进行许可。</p>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#0-%E7%97%9B%E7%82%B9-%EF%B8%8F">0 痛点 ⚠️</a></li>
+<li><a href="#1-%E8%A7%A3%E5%86%B3">1 解决</a>
+<ul>
+<li><a href="#01-%E4%BD%A0%E9%9C%80%E8%A6%81">01 你需要</a></li>
+<li><a href="#02-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%B3%95">02 设置方法</a></li>
+<li><a href="#%E7%99%BB%E9%99%86%E8%BF%99%E4%B8%AA%E7%BD%91%E5%9D%80">登陆这个网址 </a></li>
+<li><a href="#002-%E5%AE%89%E8%A3%85%E9%AA%8C%E8%AF%81%E6%8F%92%E4%BB%B6">002 安装验证插件</a>
+<ul>
+<li><a href="#docker%E5%AE%89%E8%A3%85pagermaid">docker安装PagerMaid</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://metahub.top/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://metahub.top/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          console.log('进来了2')
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+  
+  
+    
+  
+</body>
+
+</html>

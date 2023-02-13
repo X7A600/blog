@@ -1,0 +1,610 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>自然人信息社工 - 元中心</title>
+<link rel="shortcut icon" href="https://metahub.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://metahub.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://metahub.top/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="自然人信息社工 - 元中心 - Atom Feed" href="https://metahub.top/atom.xml">
+
+    
+
+  <meta name="description" content="人，是网络安全全流程中最大的弱点。针对人的攻击往往有出奇不意的效果。而想要利用人的弱点进行攻击，那么对目标的信息收集与了解就是非常重要的了。这篇文章记录了一些常用的用于对人进行身份信息收集的技术。这些技术常被用于溯源取证、社工攻击。
+0x0..." />
+  <meta property="og:title" content="自然人信息社工 - 元中心">
+  <meta property="og:description" content="人，是网络安全全流程中最大的弱点。针对人的攻击往往有出奇不意的效果。而想要利用人的弱点进行攻击，那么对目标的信息收集与了解就是非常重要的了。这篇文章记录了一些常用的用于对人进行身份信息收集的技术。这些技术常被用于溯源取证、社工攻击。
+0x0..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://metahub.top/fY9Ehwd_W/" />
+  <meta property="og:image" content="https://metahub.top/images/avatar.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="自然人信息社工 - 元中心">
+  <meta name="twitter:description" content="人，是网络安全全流程中最大的弱点。针对人的攻击往往有出奇不意的效果。而想要利用人的弱点进行攻击，那么对目标的信息收集与了解就是非常重要的了。这篇文章记录了一些常用的用于对人进行身份信息收集的技术。这些技术常被用于溯源取证、社工攻击。
+0x0...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://metahub.top/fY9Ehwd_W/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://metahub.top/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://metahub.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      元中心
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          自然人信息社工
+        </h1>
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">09-01-2022 · 14 min read</div>
+          
+            <a href="https://metahub.top/n81KFKY1T/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              文章分享
+            </a>
+          
+            <a href="https://metahub.top/P3fS3oHhg/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              数据收集
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <p>人，是网络安全全流程中最大的弱点。针对人的攻击往往有出奇不意的效果。而想要利用人的弱点进行攻击，那么对目标的信息收集与了解就是非常重要的了。这篇文章记录了一些常用的用于对人进行身份信息收集的技术。这些技术常被用于溯源取证、社工攻击。</p>
+<h2 id="0x00-社工分析中的身份信息收集">0x00 社工分析中的身份信息收集</h2>
+<p>关于人的社工分析有很多维度的信息都值得被关注。但不管怎样，开展身份信息社工工作往往都是从一些关于人的最基本的信息开始的，身份信息的收集过程就是尽可能使用有限信息关联出其他信息的过程。</p>
+<p>这里，将关于人的信息，简单分为两大类。</p>
+<p>第一类，基本信息。如：<strong>姓名</strong>，<strong>昵称</strong>，<strong>手机号码</strong>，<strong>邮箱地址</strong>，<strong>各类证件</strong>，<strong>社交账号</strong>。这类信息能在溯源中帮助确定人的身份。是人在进行社交过程中不可避免使用的信息，用来在社会中表明他的身份，是在社会中生活的名片。</p>
+<p>第二类，其他信息。如：<strong>居住地</strong>、<strong>爱好</strong>、<strong>家庭状况</strong>、<strong>婚姻状态</strong>、<strong>职业</strong>。这类信息能帮助我们更好的了解一个人的生活习惯与生活状态，代表人的特点。在生成定制化的社工字典时很有用。</p>
+<p>下面介绍常用到的信息收集方法。</p>
+<h3 id="1-搜索引擎关键字检索">1 搜索引擎关键字检索</h3>
+<p>最傻但往往最有效的办法，就是关键字搜索。但想要达到比较好的效果，依赖不少条件：</p>
+<p>1.关键字不能过于过于大众化，可以选择多个与目标相关的关键字组合；</p>
+<p>2.目标必须在互联网上有一定的活跃度;</p>
+<p>3.尽量使用google、duckduckgo等国外搜索引擎。他们的屏蔽的网页与结果较少。</p>
+<h3 id="2-已注册网站查询">2 已注册网站查询</h3>
+<p>互联网上存在一类网站，这类网站旨在收集并存储用户的各种活动信息用以构建用户画像，或收集历次信息泄露事件中的数据库。这里先不讨论此类网站动机如何，是否真实有效，但一定程度上也给其他人提供了获得目标更多信息的方式。通过泛社工库查询，可以获得目标注册过的社交网站、甚至旧密码。</p>
+<h4 id="21-reg007">2.1 REG007</h4>
+<p>查询<strong>邮箱</strong>、<strong>手机号</strong>注册过哪些社交平台：www.reg007.com</p>
+<h4 id="22-手工查询">2.2 手工查询</h4>
+<p>使用个网站的注册功能输入目标的邮箱地址或手机号，查看页面是否提示该邮箱、手机号被占用。</p>
+<h3 id="3-社工库查询">3 社工库查询</h3>
+<p>搭建社工库泄露用户隐私数据是犯法的。公网上很难找到，提供泄露数据细节的社工库，如果真的有，那么其动机也是值得高度怀疑的，使用时输入的信息极有可能被记录，用于溯源与黑吃黑。比较多的是一类脱敏后的网站，帮助用户查询自己的信息是否泄露。这两种方式都能帮助判断目标是否注册了某平台的账号。</p>
+<h4 id="31-泄露检查查询">3.1 泄露检查查询</h4>
+<table>
+<thead>
+<tr>
+<th>网站名</th>
+<th>地址</th>
+<th>可查询项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Firefox Monitor</td>
+<td>https://monitor.firefox.com</td>
+<td>邮箱</td>
+</tr>
+<tr>
+<td>HaveIBeenPwned</td>
+<td>https://haveibeenpwned.com</td>
+<td>邮箱</td>
+</tr>
+<tr>
+<td>Aleph</td>
+<td>https://aleph.occrp.org/</td>
+<td>名称、手机号码、邮箱</td>
+</tr>
+<tr>
+<td>snusbase</td>
+<td>https://snusbase.com/</td>
+<td>邮箱、名称、IP、电话、哈希、密码</td>
+</tr>
+<tr>
+<td>checkusernames</td>
+<td>https://checkusernames.com/</td>
+<td>名称</td>
+</tr>
+<tr>
+<td>Intelligence X</td>
+<td>https://intelx.io/</td>
+<td>邮箱、IP、CIDR、比特币地址</td>
+</tr>
+<tr>
+<td>dehashed</td>
+<td>http://www.dehashed.com/</td>
+<td>邮箱、用户名、IP</td>
+</tr>
+<tr>
+<td>IsLeaked</td>
+<td>https://isleaked.com/</td>
+<td>邮箱</td>
+</tr>
+<tr>
+<td>KnowEm</td>
+<td>https://knowem.com/</td>
+<td>名称</td>
+</tr>
+</tbody>
+</table>
+<h4 id="32-社工库查询">3.2 社工库查询</h4>
+<h3 id="4-姓名确认术">4 姓名确认术</h3>
+<h4 id="41-通过手机号确定姓名">4.1 通过手机号确定姓名</h4>
+<p>1&gt; 支付宝</p>
+<p>当手机号绑定了支付宝且完成了实名认证时，通过支付宝转账功能可以查到对方的姓名。</p>
+<p>如果对方的姓名只有两个字，只需手工猜出姓即可。</p>
+<p>如果对方的姓名多于两个字，可以知道最后一个名，并通过枚举姓的方式确定到姓。</p>
+<p>通过以上的方式，能保证在未实际转账的情况下获得姓名中的绝大部分。如果使用支付宝使用<strong>工商银行</strong>/<strong>网商银行</strong>进行转账，且转账成功，那么在银行app的查询明细中能看到姓名全称。</p>
+<p>ps: 微信的“<strong>银行卡或手机号转账</strong>”也有相同的效果，但是开通微信手机号转账的人很少。</p>
+<p>2&gt; 钉钉</p>
+<p>如果目标使用过钉钉，可以使用在钉钉内使用手机号搜索，可以直接查出用户名。</p>
+<p>3&gt; 社工库</p>
+<h4 id="42-百家姓频数表">4.2 百家姓频数表</h4>
+<p>鉴于有时需要用到姓名猜测，有一个关于姓的频数统计表还是蛮有作用的，能帮我们从高频到低频尽快的猜到正确的姓。</p>
+<pre><code class="language-text">李 王 张 刘 陈 杨 赵 黄 周 吴 徐 孙 胡 朱 高 林 何 郭 马 罗 梁 宋 郑 谢 韩 唐 冯 于 董 萧 程 曹 袁 邓 许 傅 沈 曾 彭 吕 苏 卢 蒋 蔡 贾 丁 魏 薛 叶 阎 余 潘 杜 戴 夏 钟 汪 田 任 姜 范 方 石 姚 谭 廖 邹 熊 金 陆 郝 孔 白 崔 康 毛 邱 秦 江 史 顾 侯 邵 孟 龙 万 段 漕 钱 汤 尹 黎 易 常 武 乔 贺 赖 龚 文 庞 樊 兰 殷 施 陶 洪 翟 安 颜 倪 严 牛 温 芦 季 俞 章 鲁 葛 伍 韦 申 尤 毕 聂 丛 焦 向 柳 邢 路 岳 齐 沿 梅 莫 庄 辛 管 祝 左 涂 谷 祁 时 舒 耿 牟 卜 路 詹 关 苗 凌 费 纪 靳 盛 童 欧 甄 项 曲 成 游 阳 裴 席 卫 查 屈 鲍 位 覃 霍 翁 隋 植 甘 景 薄 单 包 司 柏 宁 柯 阮 桂 闵 欧阳 解 强 柴 华 车 冉 房 边 滕 晋 苑 邬 臧 畅 宫 来  苟 全 褚 廉 简 娄 盖 符 奚 木 穆 党 燕 郎 邸 冀 谈 姬 屠 连 郜 晏 栾 郁 商 蒙 计 喻 揭 窦 迟 宇 敖 糜 鄢 冷 卓 花 仇 艾 蓝 都 巩 稽 井 练 仲 乐 虞 卞 封 竺 冼 原 官 衣 楚 佟 栗 匡 宗 应 台 巫 鞠 僧 桑 荆 谌 银 扬 
+</code></pre>
+<h3 id="5-社交账号社工术">5 社交账号社工术</h3>
+<h4 id="51-微信-支付宝">5.1 微信、支付宝</h4>
+<p>微信、支付宝直接在添加好友处搜手机号</p>
+<h4 id="52-qq-快手-抖音-百度云网盘-京东-脉脉-网易云-微博">5.2 QQ、快手、抖音、百度云网盘、京东、脉脉、网易云、微博</h4>
+<p>将手机号存入通讯录，然后在以下社交账号内开启通讯录同步，点<strong>添加/发现好友</strong>，获得对方社交账号。（需要开启应用访问通讯录权限）</p>
+<h4 id="53-搜索引擎关键词查找">5.3 搜索引擎关键词查找</h4>
+<p>在google、duckduckgo上搜索手机号</p>
+<h4 id="54-社工库">5.4 社工库</h4>
+<h3 id="6-位置信息">6 位置信息</h3>
+<h4 id="61-时区">6.1 时区</h4>
+<p>通过人的社交时间、语言、分享动态推断目标大致所在的时区。</p>
+<h4 id="62-精确位置">6.2 精确位置</h4>
+<p><strong>屌丝级</strong>：<strong>各类带有地理位置元数据的文件</strong>、<strong>keep</strong>、<strong>行者</strong>、<strong>朋友圈</strong>分享的位置记录</p>
+<p><strong>黑客级</strong>：欺骗用户安装能够实时获取GPS坐标的APP、诱导用户点击获取位置的链接</p>
+<p><strong>政府级</strong>：利用小区基站实现定位、利用信令漏洞定位</p>
+<h4 id="63-通过ip查地理位置">6.3 通过IP查地理位置</h4>
+<p>IP地理位置查询：https://qifu.baidu.com/?activeKey=SEARCH_IP</p>
+<p>IP地址定位：https://www.ipuu.net</p>
+<h3 id="7-邮箱信息收集">7 邮箱信息收集</h3>
+<p>显然的，腾讯系的邮箱基本都是以数字打头的，暴露了QQ号。</p>
+<p>部分网易126，163邮箱以手机号命名，暴露了手机号。</p>
+<p>部分邮箱以名称+数字命名，暴露了姓名。</p>
+<h4 id="71-收方回溯发方地址">7.1 收方回溯发方地址</h4>
+<p>查看邮件信件代码，标头内可以看到发送者的地址信息。</p>
+<p>如果邮件表头内含有&quot;X-Originating-IP:&quot;的key值，value值即为发送者的IP。比较常见的QQ邮箱、126邮箱，都有本字段。</p>
+<p>如果没有该字段，可以考虑标头内的Received字段。（多个Received字段时考虑最底部的，不一定有，有也不一定准）</p>
+<h4 id="72-发方写邮件探针">7.2 发方写邮件探针</h4>
+<p>原理是通过在邮件内容中嵌入动态加载的外部图片，当收信人点开邮件时就会在图片服务器上留下IP。</p>
+<p>具体方式是以源代码或文本模式写一封邮件，在邮件正文中嵌入图片html格式的图片链接。可以将图片自身的大小设的非常小，且将img字段设为不可见。这样攻击者打开邮件也无法感知。</p>
+<pre><code class="language-text">&lt;img src=&quot;http://n.sinaimg.cn/sinacn04/787/w440h347/20180725/5fc6-hftenia0102640.jpg&quot; w=&quot;440&quot; h=&quot;347&quot; wh=&quot;1.27&quot; alt=&quot;一组萌萌哒小猫咪表情包&quot;&gt;
+</code></pre>
+<h3 id="8-脱敏恢复">8  脱敏恢复</h3>
+<h4 id="81-身份证号脱敏恢复">8.1 身份证号脱敏恢复</h4>
+<p>身份证号是的编排是有一定规律可循的。除了最后1位是校验位外，其余各位与出生地、出生日期、性别、出生编号系系相关，因此即使是经脱敏处理的身份证号，仍能通过程序分析的方式过滤出可能的身份证序列组合。</p>
+<p>这里写了一个<a href="https://github.com/aplyc1a/toolkits/blob/master/0x01%20%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86/info-sfz.py">脱敏身份证恢复工具</a>，支持对身份证后4、6位及身份证内生日的爆破。</p>
+<h4 id="82-手机号脱敏恢复">8.2 手机号脱敏恢复</h4>
+<p>介绍怎么尽可能的恢复手机号的所有位数，但在此之前需要一定的知识介绍。</p>
+<p>手机号码的11位是有规律可循的。</p>
+<table>
+<thead>
+<tr>
+<th>1-3位</th>
+<th>4-7位</th>
+<th>8-11位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>移动接入码</td>
+<td>地区编码</td>
+<td>用户号码</td>
+</tr>
+</tbody>
+</table>
+<p><strong>移动接入码</strong></p>
+<table>
+<thead>
+<tr>
+<th>运营商类型</th>
+<th>移动接入码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电信</td>
+<td>133 149 153 173 174 177 180 181 189 191 199</td>
+</tr>
+<tr>
+<td>联通</td>
+<td>130 131 132 145 146 155 156 166 167 171 175 176 185 186</td>
+</tr>
+<tr>
+<td>移动</td>
+<td>134 135 136 137 138 139 147 148 150 151 152 157 158 159 172  178 182 183 184 187 188 195 198</td>
+</tr>
+<tr>
+<td>虚拟运营商</td>
+<td>162  165 167 170 171</td>
+</tr>
+</tbody>
+</table>
+<p>移动接入码是由运营商去向工信部申请，由工信部统一颁发的，每颁发一次，都会发布一个《电信网号码资源使用证书》。通过下载历年的证书我们能获得不同号段的分配说明。这里有个问题，国家这些年一直在推携号转网，初衷是帮助用户能够自主切换号码的运营商，如果真的全面推展开，且大家的使用积极性很高的化，那移动接入码就不再能准确区分手机号码是哪家运营商的了，但从目前的结果来看，通过移动接入码来判断运营商归属仍然是一个高度有效的方法。</p>
+<p><strong>地区编码</strong></p>
+<p>地区编码的具体数值分配由各运营商管理，因此很难给出一个通用的结构组成。所幸，网上有人专门通过爬虫等方式收集了运营商的地区编码数据库。如下所示：</p>
+<p>https://github.com/dannyhu926/phone_location</p>
+<h5 id="821-已知目标手机号前3后4位城市">8.2.1 已知目标手机号前3后4位+城市</h5>
+<p>使用下面这个shell命令简单分析以下，可以发现，如果移动接入码固定的情况下，一个城市的前7位（移动接入码+地区编码）的可能性不超过5000,更普遍的情况下是可以控制在500以内的。</p>
+<pre><code class="language-shell">array=( 134 135 136 137 138 139 147 148 150 151 152 157 158 159 172 178 182 183 184 187 188 195 198 130 131 132 145 146 155 156 166 167 171 175 176 185 186 133 149 153 173 174 177 180 181 189 191 199 )
+for i in ${array[@]}; do     cat phone_location.sql |grep &quot;'$i'&quot;|awk '{print $8}'|sort -nr | uniq -c|sort -nr|head -n 1; done
+</code></pre>
+<p>因此，这时，如果已知手机号前3后4位时，如果知道目标所处的位置将能极大的缩小目标号码的可能范围。结果的可能数&lt;=5000。</p>
+<h5 id="822-已知目标手机号后4位城市">8.2.2 已知目标手机号后4位+城市</h5>
+<p>使用下面的shell命令简单分析一下，可以发现，如果只知道目标所处的城市，那么前7位的可能性不超过20000。</p>
+<pre><code class="language-shell">clear;cat phone_location.sql |awk '{print $8}'|sort -nr|uniq -c |sort -nr|head -n 10
+</code></pre>
+<p>因此，总的来说这种情况下需要遍历的手机号可能不超过20000。</p>
+<h5 id="823-已知后4位">8.2.3 已知后4位</h5>
+<p>如果只知道后4位别的一概不知，则要尝试482049次，才能保证遍历到正确的目标号码。</p>
+<pre><code class="language-shell">clear;cat phone_location.sql |grep &quot;INSERT&quot;|grep &quot;phone_location&quot;|wc -l
+</code></pre>
+<h3 id="9-其他">9 其他</h3>
+<p>围绕得到的基本信息，可以在社交帐号内进行进一步的信息挖掘，获得其他信息。</p>
+<h4 id="91-字典定制化">9.1 字典定制化</h4>
+<p>理想情况下的一个人的互联网账户都要满足登录密码需要满足长度、复杂度、无意义、唯一性的要求，但实际操作起来这是几乎不可能的。</p>
+<p>实际场景下对口令的选取往往围绕用户自身及周边的特点展开。如果信息收集的足够彻底，我们可以依据以下的信息，生成关键词根，通过词根间的组合填充，进而生成定制化字典。</p>
+<pre><code class="language-text">{
+    &quot;人&quot;:{
+        &quot;拼音全称1&quot;:&quot;chuanjianguo&quot;,
+		&quot;拼音全称2&quot;:&quot;ChuanJianguo&quot;,
+		&quot;拼音简写1&quot;:&quot;CJg&quot;,
+		&quot;拼音简写2&quot;:&quot;cjg&quot;,
+		&quot;拼音全称3&quot;:&quot;jianguo&quot;
+    },
+    &quot;生日&quot;:{
+        &quot;生日全部1&quot;:&quot;20210512&quot;,
+		&quot;生日部分&quot;:&quot;0512&quot;
+    },
+    &quot;电话&quot;: {
+	    &quot;手机号后6位&quot;:&quot;123456&quot;,
+		&quot;手机号后4位&quot;:&quot;3456&quot;
+	},
+	&quot;学校&quot;:{
+	    &quot;学号&quot;:&quot;123456&quot;,
+		&quot;毕业或入学年份&quot;:&quot;2021&quot;
+	},
+	&quot;sfz&quot;:{
+		&quot;sfz后6位&quot;:&quot;654321&quot;,
+		&quot;sfz后4位&quot;:&quot;4321&quot;
+	},
+	&quot;爱好/宠物&quot;:{
+		&quot;关键字&quot;:&quot;xiuer&quot;
+	},
+	&quot;公司&quot;:{
+		&quot;name1&quot;:&quot;Google&quot;,
+		&quot;name2&quot;:&quot;GG&quot;
+	},
+	&quot;其他&quot;:{
+	    &quot;通用词缀&quot;:&quot;略&quot;
+	}
+}
+</code></pre>
+<h4 id="92-口令哈希逆向查询">9.2 口令哈希逆向查询</h4>
+<p>在线密文密码查询网站，有时能帮助我们得到明文密码。</p>
+<p>https://cmd5.com/</p>
+<h4 id="93-图片搜索">9.3 图片搜索</h4>
+<p><strong>百度识图</strong>：https://image.baidu.com/?fr=shitu</p>
+<p><strong>谷歌识图</strong>：https://images.google.com/</p>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+        
+
+        
+          <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
+<script type="application/javascript" src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script type="application/javascript">
+
+var options = {
+  shortname: '333398-xyz',
+  apikey: '78AVj8GBePHltbZlJzN2rggoNCHEuIvXeh5kAOUa7sIrrTjgzuIROUQrXaNTeI5k',
+}
+if ('https://disqus.skk.moe/disqus/') {
+  options.api = 'https://disqus.skk.moe/disqus/'
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+        
+      
+
+      
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  <a href="https://icp.gov.moe/?keyword=20230330" target="_blank">萌ICP备20230330号</a>
+<p>如非特殊说明, 本网站文字及图片内容采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>许可协议进行许可。</p>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#0x00-%E7%A4%BE%E5%B7%A5%E5%88%86%E6%9E%90%E4%B8%AD%E7%9A%84%E8%BA%AB%E4%BB%BD%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86">0x00 社工分析中的身份信息收集</a>
+<ul>
+<li><a href="#1-%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%85%B3%E9%94%AE%E5%AD%97%E6%A3%80%E7%B4%A2">1 搜索引擎关键字检索</a></li>
+<li><a href="#2-%E5%B7%B2%E6%B3%A8%E5%86%8C%E7%BD%91%E7%AB%99%E6%9F%A5%E8%AF%A2">2 已注册网站查询</a>
+<ul>
+<li><a href="#21-reg007">2.1 REG007</a></li>
+<li><a href="#22-%E6%89%8B%E5%B7%A5%E6%9F%A5%E8%AF%A2">2.2 手工查询</a></li>
+</ul>
+</li>
+<li><a href="#3-%E7%A4%BE%E5%B7%A5%E5%BA%93%E6%9F%A5%E8%AF%A2">3 社工库查询</a>
+<ul>
+<li><a href="#31-%E6%B3%84%E9%9C%B2%E6%A3%80%E6%9F%A5%E6%9F%A5%E8%AF%A2">3.1 泄露检查查询</a></li>
+<li><a href="#32-%E7%A4%BE%E5%B7%A5%E5%BA%93%E6%9F%A5%E8%AF%A2">3.2 社工库查询</a></li>
+</ul>
+</li>
+<li><a href="#4-%E5%A7%93%E5%90%8D%E7%A1%AE%E8%AE%A4%E6%9C%AF">4 姓名确认术</a>
+<ul>
+<li><a href="#41-%E9%80%9A%E8%BF%87%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A1%AE%E5%AE%9A%E5%A7%93%E5%90%8D">4.1 通过手机号确定姓名</a></li>
+<li><a href="#42-%E7%99%BE%E5%AE%B6%E5%A7%93%E9%A2%91%E6%95%B0%E8%A1%A8">4.2 百家姓频数表</a></li>
+</ul>
+</li>
+<li><a href="#5-%E7%A4%BE%E4%BA%A4%E8%B4%A6%E5%8F%B7%E7%A4%BE%E5%B7%A5%E6%9C%AF">5 社交账号社工术</a>
+<ul>
+<li><a href="#51-%E5%BE%AE%E4%BF%A1-%E6%94%AF%E4%BB%98%E5%AE%9D">5.1 微信、支付宝</a></li>
+<li><a href="#52-qq-%E5%BF%AB%E6%89%8B-%E6%8A%96%E9%9F%B3-%E7%99%BE%E5%BA%A6%E4%BA%91%E7%BD%91%E7%9B%98-%E4%BA%AC%E4%B8%9C-%E8%84%89%E8%84%89-%E7%BD%91%E6%98%93%E4%BA%91-%E5%BE%AE%E5%8D%9A">5.2 QQ、快手、抖音、百度云网盘、京东、脉脉、网易云、微博</a></li>
+<li><a href="#53-%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%85%B3%E9%94%AE%E8%AF%8D%E6%9F%A5%E6%89%BE">5.3 搜索引擎关键词查找</a></li>
+<li><a href="#54-%E7%A4%BE%E5%B7%A5%E5%BA%93">5.4 社工库</a></li>
+</ul>
+</li>
+<li><a href="#6-%E4%BD%8D%E7%BD%AE%E4%BF%A1%E6%81%AF">6 位置信息</a>
+<ul>
+<li><a href="#61-%E6%97%B6%E5%8C%BA">6.1 时区</a></li>
+<li><a href="#62-%E7%B2%BE%E7%A1%AE%E4%BD%8D%E7%BD%AE">6.2 精确位置</a></li>
+<li><a href="#63-%E9%80%9A%E8%BF%87ip%E6%9F%A5%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE">6.3 通过IP查地理位置</a></li>
+</ul>
+</li>
+<li><a href="#7-%E9%82%AE%E7%AE%B1%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86">7 邮箱信息收集</a>
+<ul>
+<li><a href="#71-%E6%94%B6%E6%96%B9%E5%9B%9E%E6%BA%AF%E5%8F%91%E6%96%B9%E5%9C%B0%E5%9D%80">7.1 收方回溯发方地址</a></li>
+<li><a href="#72-%E5%8F%91%E6%96%B9%E5%86%99%E9%82%AE%E4%BB%B6%E6%8E%A2%E9%92%88">7.2 发方写邮件探针</a></li>
+</ul>
+</li>
+<li><a href="#8-%E8%84%B1%E6%95%8F%E6%81%A2%E5%A4%8D">8  脱敏恢复</a>
+<ul>
+<li><a href="#81-%E8%BA%AB%E4%BB%BD%E8%AF%81%E5%8F%B7%E8%84%B1%E6%95%8F%E6%81%A2%E5%A4%8D">8.1 身份证号脱敏恢复</a></li>
+<li><a href="#82-%E6%89%8B%E6%9C%BA%E5%8F%B7%E8%84%B1%E6%95%8F%E6%81%A2%E5%A4%8D">8.2 手机号脱敏恢复</a>
+<ul>
+<li><a href="#821-%E5%B7%B2%E7%9F%A5%E7%9B%AE%E6%A0%87%E6%89%8B%E6%9C%BA%E5%8F%B7%E5%89%8D3%E5%90%8E4%E4%BD%8D%E5%9F%8E%E5%B8%82">8.2.1 已知目标手机号前3后4位+城市</a></li>
+<li><a href="#822-%E5%B7%B2%E7%9F%A5%E7%9B%AE%E6%A0%87%E6%89%8B%E6%9C%BA%E5%8F%B7%E5%90%8E4%E4%BD%8D%E5%9F%8E%E5%B8%82">8.2.2 已知目标手机号后4位+城市</a></li>
+<li><a href="#823-%E5%B7%B2%E7%9F%A5%E5%90%8E4%E4%BD%8D">8.2.3 已知后4位</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#9-%E5%85%B6%E4%BB%96">9 其他</a>
+<ul>
+<li><a href="#91-%E5%AD%97%E5%85%B8%E5%AE%9A%E5%88%B6%E5%8C%96">9.1 字典定制化</a></li>
+<li><a href="#92-%E5%8F%A3%E4%BB%A4%E5%93%88%E5%B8%8C%E9%80%86%E5%90%91%E6%9F%A5%E8%AF%A2">9.2 口令哈希逆向查询</a></li>
+<li><a href="#93-%E5%9B%BE%E7%89%87%E6%90%9C%E7%B4%A2">9.3 图片搜索</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://metahub.top/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://metahub.top/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          console.log('进来了2')
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+  
+  
+    
+  
+</body>
+
+</html>
